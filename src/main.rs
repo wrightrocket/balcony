@@ -1,5 +1,7 @@
+mod herbs; // Uses file path src/herbs/mod.rs
 mod flowers; // Uses file path src/flowers.rs
 fn main() {
+    #[allow(unused_variables)]
 
     mod patio { // Inline module declaration
         #[derive(Debug)]
@@ -23,9 +25,24 @@ fn main() {
     let vinyl = patio::Furniture::Umbrella(String::from("Tan nine foot crankable umbrella."));
     println!("What keeps the balcony cool? {:#?}", vinyl);
 
-    use flowers::Flower;
+    use flowers::Flower; // Uses file path src/flowers.rs
     let mom = Flower::JuliaChild(String::from("Yellow rose from Hunter's nursery."));
+    println!("In honor of Pattie's Mom, {:?}.", mom);
 
-    // mod herbs; // Uses file path src/herbs/mod.rs
-   
+    use herbs::Herbs; // Uses file path src/herbs/mod.rs
+//    Basil,
+//    Cilantro,
+//    Dill,
+//    Rosemary,
+
+    println!("These are the herbs on my balcony:");
+    let mut herb = Herbs::Basil;
+    println!("{:?}", herb);
+    herb = Herbs::Cilantro;
+    println!("{:?}", herb);
+    herb = Herbs::Dill;
+    println!("{:?}", herb);
+    herb = Herbs::Rosemary;
+    println!("{:?}", herb);
+
 }

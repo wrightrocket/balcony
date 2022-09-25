@@ -1,4 +1,5 @@
-enum Herbs {
+#[derive(Debug)]
+pub enum Herbs {
     Basil,
     Cilantro,
     Dill,
