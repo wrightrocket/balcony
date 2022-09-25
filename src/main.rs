@@ -1,3 +1,4 @@
+mod flowers; // Uses file path src/flowers.rs
 fn main() {
 
     mod patio { // Inline module declaration
@@ -11,10 +12,7 @@ fn main() {
 
     }
 
-    // mod flowers; // Uses file path src/flowers.rs
-
-    // mod herbs; // Uses file path src/herbs/mod.rs
-    
+    // using inline module does not require use statement 
     println!("Hello, welcome to my balcony!");
     let chairs = patio::Furniture::Chair(String::from("Two teal chairs."));
     dbg!(chairs); 
@@ -25,4 +23,9 @@ fn main() {
     let vinyl = patio::Furniture::Umbrella(String::from("Tan nine foot crankable umbrella."));
     println!("What keeps the balcony cool? {:#?}", vinyl);
 
+    use flowers::Flower;
+    let mom = Flower::JuliaChild(String::from("Yellow rose from Hunter's nursery."));
+
+    // mod herbs; // Uses file path src/herbs/mod.rs
+   
 }

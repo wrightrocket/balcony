@@ -16,3 +16,5 @@ description = "An example of organizing rust code based on what is on my balcony
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+# flowers = { path = "src/flowers.rs" }
+

@@ -1,8 +1,8 @@
-enum Flowers {
-    Julia_Child,
-    Crimson Glory,
-    Plumeria,
-    Begonia,
-    Verdana,
-    Orchid,
+pub enum Flower {
+        JuliaChild(String),
+        CrimsonGlory(String),
+        Plumeria,
+        Begonia,
+        Verdana,
+        Orchid,
 }
