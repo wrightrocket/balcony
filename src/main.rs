@@ -45,4 +45,5 @@ fn main() {
     herb = Herbs::Rosemary;
     println!("{:?}", herb);
 // added comment
+// another comment
 }
